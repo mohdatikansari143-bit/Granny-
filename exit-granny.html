@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#000000">
+  <title>Granny | TrexGames</title>
+  <style>
+    * { box-sizing: border-box; }
+    html, body {
+      margin: 0;
+      width: 100%;
+      min-height: 100%;
+      background: #000;
+      color: #fff;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    body { min-height: 100vh; display: flex; flex-direction: column; }
+    .topbar {
+      min-height: 56px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 10px 14px;
+      background: #080808;
+      border-bottom: 1px solid #242424;
+    }
+    .back-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 42px;
+      height: 38px;
+      padding: 0 12px;
+      border: 1px solid #333;
+      border-radius: 9px;
+      background: #171717;
+      color: #fff;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 600;
+    }
+    .game-title { margin: 0; font-size: 17px; font-weight: 700; }
+    .game-area {
+      width: 100%;
+      flex: 1;
+      min-height: 0;
+      height: calc(100vh - 56px);
+      background: #000;
+    }
+    .game-area iframe {
+      display: block;
+      width: 100%;
+      height: 100%;
+      min-height: 500px;
+      border: 0;
+      background: #000;
+    }
+    @media (max-width: 600px) {
+      .game-area { height: calc(100dvh - 56px); }
+      .game-area iframe { min-height: 400px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <a class="back-button" href="index.html" aria-label="Back to games">← Back</a>
+    <h1 class="game-title">Granny</h1>
+  </header>
+
+  <main class="game-area">
+    <iframe
+      src="https://www.miniplay.com/embed/granny"
+      title="Granny game"
+      allow="fullscreen; autoplay; gamepad"
+      allowfullscreen
+      loading="eager"
+      referrerpolicy="strict-origin-when-cross-origin">
+    </iframe>
+  </main>
+</body>
+</html>
